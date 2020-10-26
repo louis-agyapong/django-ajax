@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Django - {% block title %}{% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Goole fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700%7CMerriweather+Sans:300,400,700" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+</head>
+
+<body>
+
+    <main id="main">
+        <div class="container">
+            <h1 class="display-4 my-5 my-lg-6 pb-lg-4 text-center">Contact</h1>
+        </div>
+        <div class="bg-skew bg-skew-light">
+            <div class="container pt-3">
+                <div class="row justify-content-lg-center">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            </div>
+        </div><!-- end bg-skew -->
+    </main>
+
+    <!-- JS -->
+    <script src="{% static 'js/jquery.slim.min.j' %}s"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>
+
