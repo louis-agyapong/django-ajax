@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+
 from .forms import InfoModelForm
 from .models import Info
 
@@ -11,7 +13,20 @@ def info_add_view(request):
     data = {}
 
     if request.method == "POST":
-        print("works")
+        if form.is_valid():
+            name = form.cleaned_data["name"]
+            email = form.cleaned_data["email"]
+            message = form.cleaned_data["message"]
+            agree = form.cleaned_data["agree"]
+
+            data['name'] = name
+            data['email'] = email
+            data['message'] = message
+            data['agree'] = agree
+
+            form.save()
+
+            return JsonResponse(data, safe=False)
 
     context = {
         "form": form,

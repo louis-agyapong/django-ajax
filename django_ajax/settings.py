@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Local apps
     'infos',
     # External apps
+    # 'widget_tweaks',
 ]
 
 MIDDLEWARE = [
