@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'infos',
-    'dropdown',
     # External apps
     # 'widget_tweaks',
 ]
