@@ -8,6 +8,8 @@ from infos.views import info_add_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", info_add_view, name="main-view"),
+    # Persons
+    path("person/", include('persons.urls')),
 ]
 
 if settings.DEBUG:
